@@ -1,0 +1,3 @@
+SELECT COUNT(gender), gender FROM public."users"
+WHERE country = '{{this.params.country}}'
+GROUP BY gender;

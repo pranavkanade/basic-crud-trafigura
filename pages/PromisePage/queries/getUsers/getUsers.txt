@@ -1,0 +1,4 @@
+SELECT * FROM public."users" 
+ORDER BY id
+OFFSET {{users_table.pageOffset}}
+LIMIT {{users_table.pageSize}};

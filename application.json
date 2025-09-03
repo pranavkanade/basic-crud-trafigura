@@ -20,6 +20,10 @@
     {
       "id": "Page1",
       "isDefault": true
+    },
+    {
+      "id": "PromisePage",
+      "isDefault": false
     }
   ],
   "unpublishedApplicationDetail": {
