@@ -1,0 +1,5 @@
+SELECT * FROM public."users" 
+WHERE country ILIKE '{{country_filter.selectedOptionValue}}%' AND name ILIKE '%{{search_inp.text}}%'
+ORDER BY id
+OFFSET {{users_table.pageOffset}}
+LIMIT {{users_table.pageSize}};
