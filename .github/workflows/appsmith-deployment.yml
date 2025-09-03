@@ -1,0 +1,13 @@
+name: appsmith-cd  # Workflow name
+
+on:
+  push:
+    branches:
+      - master  # Trigger on push to master branch
+
+jobs:
+  deploy-appsmith:
+    runs-on: ubuntu-latest  # Run on Ubuntu
+
+    steps:
+      - run: "curl --location --fail-early --request POST https://trafigura.demo.appsmith.com/api/v1/git/applications/68b6a06fbe3e98727f730e44/deploy?refName=master --header 'Authorization: Bearer ${{ secrets.APPSMITH_CD_KEY }}'"
